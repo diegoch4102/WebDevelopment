@@ -43,6 +43,10 @@ app.post('/api/personas', async(req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send("<h1>Hola app</h1>");
+});
+
 app.listen(3000, () => {
     console.log("Conectado al servidor");
 });

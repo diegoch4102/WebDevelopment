@@ -9,14 +9,14 @@
      { nombre: "Luis", apellido: "Perez", edad: "33" },
      { nombre: "Ana", apellido: "Luna", edad: "28" },
      { nombre: "Lidia", apellido: "Pico", edad: "33" },
- ]
+ ];
 
  app.get('/', (req, res) => {
-     res.send("<h1>Hola</h1>")
+     res.send("<h1>Hola app_first</h1>");
  });
 
  app.get('/api/personas', (req, res) => {
-     res.status(200).json(personas)
+     res.status(200).json(personas);
  });
 
  app.post('/api/personas', (req, res) => {
