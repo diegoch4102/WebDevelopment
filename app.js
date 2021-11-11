@@ -13,7 +13,7 @@ app.use(express.json());
     1. Array de la eestuctura de la colección
     2. Configuración
 */
-const personasSchema = conection.Schema({
+const personaSchema = conection.Schema({
     nombre: String,
     apellido: String,
     email: String,
@@ -32,7 +32,7 @@ const personaDAO = conection.model('User', personasSchema);
 
 // Es necesario que sea un método asíncrono, ya que no hay certeza que
 // Mongo responda rápido
-app.post('/api/personas', async(req, res) => {
+/* app.post('/api/personas', async(req, res) => {
     const nuevaPersona = req.body;
     try {
         await personaDAO.create(nuevaPersona);
@@ -41,6 +41,10 @@ app.post('/api/personas', async(req, res) => {
         console.log("Insert error: " + error);
         res.status(400).send("Insert error: " + error);
     }
+}); */
+app.post('/api/personas', (req, res) => {
+    console.log(req.body);
+    res.status(201);
 });
 
 app.listen(3000, () => {
