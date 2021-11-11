@@ -1,0 +1,28 @@
+{
+  "name": "api-rest-example",
+  "version": "1.0.0",
+  "description": "Web Application built as a Single-Page Application for a gallery art attemping to free publish images and sell works.",
+  "main": "index.js",
+  "scripts": {
+    "app": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegoch4102/WebDevelopment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegoch4102/WebDevelopment/issues"
+  },
+  "homepage": "https://github.com/diegoch4102/WebDevelopment#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
