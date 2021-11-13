@@ -1,5 +1,6 @@
 // Importaciones
 const express = require("express");
+const cors = require("cors");
 const personasCtrl = require("./controller/PersonasCtrl");
 
 // Crea la app Express
@@ -8,6 +9,7 @@ const app = express();
 
 // 🤷🏻‍♂️
 app.use(express.json());
+app.use(cors);
 
 // Es necesario que sean métodos asíncronos, ya que no hay certeza que
 // Mongo responda rápido
