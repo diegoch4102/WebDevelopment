@@ -27,7 +27,7 @@ app.post('/api/personas', async(req, res) => {
     const nuevaPersona = req.body;
     try {
         await personasCtrl.insertar(nuevaPersona);
-        res.status(201).send("Persona registrada exitosamente");
+        res.status(201).json(nuevaPersona);
     } catch (error) {
         console.log("Insert error: " + error);
         res.status(400).send("Insert error: " + error);
@@ -38,7 +38,7 @@ app.put('/api/personas', async(req, res) => {
     const personaMod = req.body;
     try {
         await personasCtrl.actualizar(personaMod);
-        res.status(200).send("Persona actualizada exitosamente");
+        res.status(200).json(personaMod);
     } catch (error) {
         console.log("Update error: " + error);
         res.status(400).send("Update error: " + error);
