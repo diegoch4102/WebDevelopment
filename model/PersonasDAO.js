@@ -6,11 +6,11 @@ const conection = require("../DB/conectionDB");
     2. Configuración
 */
 const personaSchema = conection.Schema({
-    nombre: String,
-    apellido: String,
+    firstname: String,
+    lastname: String,
     email: String,
-    contraseña: String,
-    telefono: String
+    password: String,
+    phoneNumber: String
 }, {
     collection: "User",
     versionKey: false
