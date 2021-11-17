@@ -9,7 +9,7 @@ const app = express();
 
 // 🤷🏻‍♂️
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 
 // Es necesario que sean métodos asíncronos, ya que no hay certeza que
 // Mongo responda rápido
