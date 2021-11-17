@@ -8,6 +8,7 @@ PersonasCtrl.listar = async() => {
 };
 
 PersonasCtrl.insertar = async(persona) => {
+    delete persona._id;
     return await personasDAO.create(persona);
 };
 

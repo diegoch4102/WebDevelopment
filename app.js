@@ -50,7 +50,7 @@ app.delete('/api/personas/:id', async(req, res) => {
     console.log(id);
     try {
         await personasCtrl.eliminar(id);
-        res.status(200).send("Persona eliminada exitosamente");
+        res.status(204).send("Persona eliminada exitosamente");
     } catch (error) {
         console.log("Delete error: " + error);
         res.status(400).send("Delete error: " + error);
